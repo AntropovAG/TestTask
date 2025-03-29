@@ -26,16 +26,17 @@
     padding: 20px;
 }
 
-.button {
+.link {
     width: 100px;
-    height: 50px;
+    padding: 10px;
+    color: black;
     border-radius: 16px;
     border: solid 1px blue;
     background: transparent;
+    text-align: center;
 }
 
-.button:hover {
-    cursor: pointer;
+.link:hover {
     background: blue;
     color: white;
 }
