@@ -8,14 +8,14 @@ interface CardsListProps {
   data: CardInterface[]
 }
 
-function CardsList( {data}: CardsListProps ) {
+function CardsList({ data }: CardsListProps) {
   return (
     <>
-            <Filter />
+      <Filter />
       <div className={styles.container}>
-        {data.length > 0 ? data.map((item) => <Card key={item.id} {...item}/>) : 'Нет карточек'}
+        {data.length > 0 ? data.map((item) => <Card key={item.id} {...item} />) : 'Нет карточек'}
       </div>
-      </>
+    </>
   )
 }
 

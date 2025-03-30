@@ -13,9 +13,9 @@ export default function Filter() {
 
     return (
         <form className={styles.container}>
-            <input type="radio" id='all' name='filter' value={'all'} onChange={(e)=>handleChange(e)} checked={filter === 'all'}/>
+            <input type="radio" id='all' name='filter' value={'all'} onChange={(e) => handleChange(e)} checked={filter === 'all'} />
             <label htmlFor="all">Все</label>
-            <input type="radio" id='liked' name='filter' value={'liked'} onChange={(e)=>handleChange(e)} checked={filter === 'liked'}/>
+            <input type="radio" id='liked' name='filter' value={'liked'} onChange={(e) => handleChange(e)} checked={filter === 'liked'} />
             <label htmlFor="liked">Избранные</label>
         </form>
     )

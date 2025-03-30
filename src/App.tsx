@@ -12,9 +12,9 @@ import { Routes, Route } from 'react-router';
 
 function App() {
   const dispatch = useAppDispatch();
-  const data = useAppSelector((state)=> state.cards.displayedCards)
+  const data = useAppSelector((state) => state.cards.displayedCards)
 
-  useEffect(()=>{
+  useEffect(() => {
     dispatch(fetchCards())
   }, [dispatch])
 
@@ -23,7 +23,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/products' element={ <CardsList data={data} />}></Route>
+        <Route path='/products' element={<CardsList data={data} />}></Route>
         <Route path='/products/:id' element={<CardInfo />}></Route>
         <Route path='/create-product' element={<Form />}></Route>
       </Routes>

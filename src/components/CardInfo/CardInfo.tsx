@@ -4,10 +4,10 @@ import { useParams, Link } from 'react-router'
 import { useAppSelector } from '../../utils/hooks';
 
 export default function CardInfo() {
-    const { id } = useParams<{id: string}>();
+    const { id } = useParams<{ id: string }>();
     const card = useAppSelector((state) => state.cards.cards.find((item) => item.id === Number(id)));
 
-    if(!card) {
+    if (!card) {
         return 'Нет данных карточки'
     }
 
