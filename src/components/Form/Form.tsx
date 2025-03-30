@@ -38,13 +38,13 @@ export default function Form() {
     return (
         <form className={styles.container} onSubmit={handleSubmit}>
             <label className={styles.label} htmlFor="title">Название</label>
-            <input className={styles.input} type="text" name="title" id="title" value={formData.title} required onChange={handleChange} />
+            <input className={styles.input} type="text" name="title" id="title" minLength={2} value={formData.title} required onChange={handleChange} />
 
             <label className={styles.label} htmlFor="image">Ссылка на картинку</label>
-            <input className={styles.input} type="text" name='url' id='url' value={formData.url} required onChange={handleChange} />
+            <input className={styles.input} type="url" name='url' id='url' value={formData.url} required onChange={handleChange} />
 
             <label className={styles.label} htmlFor="description">Описание</label>
-            <input className={styles.input} type="text" name='description' id='description' value={formData.description} required onChange={handleChange} />
+            <input className={styles.input} type="text" name='description' id='description' minLength={2} value={formData.description} required onChange={handleChange} />
 
             <button className={styles.button} type='submit'>Добавить карточку</button>
         </form>
